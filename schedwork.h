@@ -38,4 +38,10 @@ bool schedule(
     DailySchedule& sched
 );
 
+bool scheduleHelper(
+    AvailabilityMatrix& avail,
+    const size_t dailyNeed,
+    const size_t maxShifts,
+    DailySchedule& sched, std::vector<int> currentShifts, int index_row, int index_col);
+
 #endif

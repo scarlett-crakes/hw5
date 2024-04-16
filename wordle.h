@@ -4,6 +4,7 @@
 #ifndef RECCHECK
 #include <set>
 #include <string>
+#include <queue>
 #endif
 
 /**
@@ -21,5 +22,13 @@ std::set<std::string> wordle(
     const std::string& in,
     const std::string& floating,
     const std::set<std::string>& dict);
+
+bool wordleHelper(
+    std::string floating,
+    const std::set<std::string>& dict, int index, std::string word, std::set<std::string>& listOfWords);
+
+void checkEveryLetter(
+    std::string floating,
+    const std::set<std::string>& dict, int index, std::string word, std::set<std::string>& listOfWords);
 
 #endif
